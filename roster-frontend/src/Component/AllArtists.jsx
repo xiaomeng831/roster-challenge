@@ -13,6 +13,9 @@ const THead = styled(TableRow)`
         font-size: 20px;
         background: #000000;
         color: #FFFFFF;
+        position:sticky;
+        top:0;      
+        z-index:1; 
     }
 `;
 
@@ -82,7 +85,7 @@ const AllArtists = () => {
                         <TableCell >{(artist.payoutAmount/calculateMonths()).toFixed(2)}</TableCell>
                         <TableCell >{artist.payoutStatus? "completed":"not yet"}</TableCell>
                         <TableCell >
-                            <Button color="primary" variant="contained" style={{marginRight:10}} component={Link} to={`/edit/${artist._id}`}>Edit</Button>
+                            <Button color="primary" variant="contained" style={{marginRight:10, zIndex:0}} component={Link} to={`/edit/${artist._id}`}>Edit</Button>
                             <Button color="secondary" variant="contained" onClick={() => deleteArtistData(artist._id)}>Delete</Button>
                         </TableCell>
                     </TRow>
