@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-
-const artistsUrl = 'http://localhost:8080';
+//const artistsUrl = 'http://localhost:8080';
+const artistsUrl = 'https://roster-backend.herokuapp.com';
 
 export const getArtists = async (id) => {
     id = id || '';

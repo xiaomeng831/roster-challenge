@@ -2,6 +2,7 @@ import Artist from '../model/artist.js';
 
 // Get all artists
 export const getArtists = async (request, response) => {
+    console.log("hello heroku");
     try{
         const artists = await Artist.find();
         response.status(200).json(artists);
